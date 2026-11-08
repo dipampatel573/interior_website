@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #151515;
+    color: #FBF9F5;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: #151515;
+    color: #FBF9F5;
+  }
+
+  /* Custom subtle luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #151515;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A88B67;
+  }
+}
+
+/* Lenis essential styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Editorial line animations and typography utilities */
+.editorial-line {
+  display: block;
+  overflow: hidden;
+}
+
+.text-stroke-subtle {
+  -webkit-text-stroke: 1px rgba(245, 241, 232, 0.2);
+}
+
+/* Smooth fade mask for luxury transitions */
+.mask-radial {
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+}
+
+/* Subtle architectural grain */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
